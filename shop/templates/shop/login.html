@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Login page</title>
+  <link rel="stylesheet" href="{% static 'css/stylelogin.css' %}"">
+</head>
+<body>
+    <!-- multistep form -->
+  
+<br>
+<br>
+<br><br>
+
+{% comment %} <button type="button" class="btn btn-dark btn-lg btn-block">LOGIN FORM</button> {% endcomment %}
+
+{% block js%}
+<script>
+{% if thank %}
+alert('Invalid details!!!');
+
+
+{% endif %}
+</script>
+{% endblock %}
+<div class="container">
+  <h1 >LOGIN FORM</h1>
+<form id="msform" method="POST" action="/shop/loginhandle/"  enctype="multipart/form-data">
+  <!-- progressbar -->
+  {% csrf_token %}
+  
+  <!-- fieldsets -->
+ 
+    
+    
+    <br>
+    <input type="email" name="loginwebmailid" placeholder="Webmail" /><br>
+    <input type="password" name="loginpassword" placeholder="Password" /><br>
+    
+	
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  
+</form>
+
+
+</br>
+</br>
+</br>
+
+<h2>Don't have an account? Create here</h2>
+
+<a href= "/shop/register/">
+<button type="button" class="btn btn-dark btn-lg btn-block">CREATE AN ACCOUNT</button></a>
+
+
+
+
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->    <footer>
+
+        
+</body>
+</html>

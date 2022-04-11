@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Connect Nitt</title>
+    <link rel="stylesheet" href="{% static 'css/stylelogin.css' %}"">
+</head>
+<body>
+    <!-- multistep form -->
+  
+<br>
+<div class="container">
+<a href="/shop/index">
+<button type="button" class="btn btn-dark btn-lg btn-block">HOME</button></a>
+<br>
+<br><br><a href="/shop/addpost/">
+<button type="button" class="btn btn-dark btn-lg btn-block">add post</button></a>
+<h1>
+{{post.0.username}}</h1></br>
+{{post.0.caption}}</br>
+<img src='/media/{{post.0.pic}}' height="500px" width="500px">
+</br>
+<a href='/media/{{post.0.attachement}}' target="_blank" rel="noopener noreferrer">
+Attachements</a>
+</br>
+..............................................
+</br>
+
+{% for i in post|slice:"1:"%}
+<h1>
+{{i.username}}</h1></br>
+{{i.caption}}</br>
+<img src='/media/{{i.pic}}' height="500px" width="500px">
+<a href='/media/{{i.attachement}}'target="_blank" rel="noopener noreferrer"></br>
+Attachements</a>
+</br>
+..............................................
+</br>
+{% endfor %}
+
+    
+	
+   
+  
+
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->    <footer>
+        
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  
+</head>
+<body>
+    <!-- multistep form -->
+  
+<br>
+<br>
+<br><br>
+<button type="button" class="btn btn-dark btn-lg btn-block">REGISTERATION FORM</button>
+
+
+
+<form id="msform" method="post" action="/shop/posthandle/"  enctype="multipart/form-data">
+  <!-- progressbar -->
+  {% csrf_token %}
+  
+  <!-- fieldsets -->
+ 
+    
+    
+    <br>
+    upload image<input type="file" name="image" /></br>
+   caption <input type="text" name="caption" placeholder="caption" /></br>
+    add attachement<input type="file" name="file" /></br>
+
+    
+    
+	
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  
+</form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->    <footer>
+        
+</body>
+</html>
